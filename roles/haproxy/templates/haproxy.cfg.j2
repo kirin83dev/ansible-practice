@@ -45,5 +45,5 @@ frontend  main *:{{ haproxy_port }}
 backend www
     balance     roundrobin
     {% for host in groups['webservers'] %}
-    server {{ host }} {{ hostvars[host]['ansible_' + iface].ipv4.address }}:{{ nginx_port }}
+    server {{ host }} 192.168.56.104:{{ nginx_port }}
     {% endfor %}
