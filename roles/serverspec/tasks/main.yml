@@ -1,8 +1,8 @@
 ---
 # tasks file for serverspec
 - name: install serverspec
-  #gem: name={{ item.key }} version={{ item.value.version }} state=present user_install=no
-  gem: name={{ item.key }} state=present user_install=no
+  gem: name={{ item.key }} version={{ item.value.version }} state=present user_install=no
+  #gem: name={{ item.key }} state=present user_install=no
   with_dict: "{{ serverspec_gem_list }}"
 
 - name: make serverspec directory
