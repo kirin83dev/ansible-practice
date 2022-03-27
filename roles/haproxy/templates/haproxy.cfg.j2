@@ -46,5 +46,4 @@ backend www
     balance     roundrobin
     {% for host in groups['webservers'] %}
     server {{ host }} {{ host }}:{{ nginx_port }}
-    server {{ host }} {{ host }}:{{ nginx_port }}
     {% endfor %}
