@@ -45,6 +45,6 @@ frontend  main *:{{ haproxy_port }}
 backend www
     balance     roundrobin
     {% for host in groups['webservers'] %}
-    server server1 {{ host }}:{{ nginx_port }}
-    server server2 {{ host }}:{{ nginx_port }}
+    server {{ host }} {{ host }}:{{ nginx_port }}
+    server {{ host }} {{ host }}:{{ nginx_port }}
     {% endfor %}
