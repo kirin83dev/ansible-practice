@@ -9,4 +9,4 @@
 localhost
 
 [kibanaservers]
-kibana.devops-book.local
+localhost
